@@ -1,0 +1,619 @@
+.user-profile-card {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.profile-header {
+  position: relative;
+}
+
+.profile-bg {
+  height: 100px;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 1.5rem 1.5rem;
+  position: relative;
+}
+
+.avatar-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  color: var(--primary-color);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 2rem;
+  border: 4px solid white;
+  margin-top: -40px;
+  margin-right: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.user-info {
+  padding-top: 1rem;
+  flex: 1;
+}
+
+.user-role {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.user-name {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 1rem;
+}
+
+.balance-card {
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: var(--shadow-md);
+  min-width: 200px;
+  margin-top: 1rem;
+}
+
+.balance-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.balance-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.profile-statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-box p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.profile-details {
+  padding: 1.5rem;
+}
+
+.details-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .profile-info {
+    flex-direction: column;
+  }
+
+  .balance-card {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-statistics {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-main-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.profile-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 0;
+}
+
+.profile-card {
+  background: #181c23;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px 0 rgba(255, 122, 26, 0.04);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+}
+
+.profile-user-card {
+  flex: 2;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.profile-user-avatar {
+  width: 120px;
+  height: 120px;
+  background: #181c23;
+  border: 3px solid #ff9c4a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #ff9c4a;
+  font-weight: 700;
+}
+
+.profile-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-user-initial {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff9c4a;
+}
+
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-user-welcome {
+  color: #ffb97a;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.profile-user-name-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-user-name {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-user-role-badge {
+  display: inline-block;
+  background: #ff9c4a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 4px 16px;
+  margin-top: 12px;
+  min-width: unset;
+  width: auto;
+  max-width: 160px;
+  text-align: center;
+}
+
+.profile-balance-card {
+  flex: 1;
+  background: #23242a;
+  border: none;
+  color: #ff9c4a;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 16px;
+  box-shadow: none;
+  padding: 32px 28px;
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-balance-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ff9c4a;
+}
+
+.profile-balance-id {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #ffb97a;
+}
+
+.profile-balance-label {
+  color: #ffb97a;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.profile-balance-amount {
+  color: #ff9c4a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.profile-stats-row {
+  gap: 32px;
+}
+
+.profile-stat-card {
+  flex: 1;
+  align-items: flex-start;
+  gap: 8px;
+  background: #23242a;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(255, 122, 26, 0.04);
+  border: none;
+}
+
+.profile-stat-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.profile-stat-value {
+  color: #ff7300;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-stat-desc {
+  color: #ffb97a;
+  font-size: 15px;
+}
+
+.profile-info-card {
+  margin-top: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 24px 32px;
+  background: #23242a;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(255, 122, 26, 0.04);
+  border: none;
+}
+
+.profile-info-title {
+  color: #ff7300;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-info-item {
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.profile-info-item span {
+  color: #ffb97a;
+}
+
+.profile-edit-btn {
+  background: #ff7300;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 16px;
+}
+
+.profile-edit-btn:hover {
+  background: #ff8a1a;
+}
+
+.profile-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-modal-content {
+  background: #181818;
+  border-radius: 16px;
+  padding: 32px 24px;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 4px 32px 0 rgba(255, 115, 0, 0.20);
+}
+
+.profile-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #ff7300;
+  cursor: pointer;
+}
+
+.profile-modal-form label {
+  display: flex;
+  flex-direction: column;
+  color: #ffb97a;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.profile-modal-form input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ff7300;
+  background: #232b36;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.profile-modal-form button[type="submit"] {
+  background: #ff7300;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+
+.profile-modal-form button[type="submit"]:hover {
+  background: #ff8a1a;
+}
+
+@media (max-width: 1100px) {
+  .profile-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .profile-main-ui {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-main-ui {
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .profile-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .profile-info-card {
+    padding: 12px 16px;
+  }
+}
+
+body.light .profile-main-ui {
+  background: #fff;
+}
+
+body.light .profile-card {
+  background: #fff3e0;
+  box-shadow: 0 4px 32px 0 rgba(255, 115, 0, 0.10);
+  color: #181818;
+}
+
+body.light .profile-user-card {
+  background: #fff3e0;
+}
+
+body.light .profile-user-avatar {
+  background: #fff;
+  border: 3px solid #ff7300;
+  color: #ff7300;
+}
+
+body.light .profile-user-initial {
+  color: #ff7300;
+}
+
+body.light .profile-user-name {
+  color: #181818;
+}
+
+body.light .profile-user-role-badge {
+  background: #ff7300;
+  color: #fff;
+}
+
+body.light .profile-balance-card {
+  background: #fff;
+  border: 2px solid #ff7300;
+  color: #ff7300;
+}
+
+body.light .profile-balance-title {
+  color: #ff7300;
+}
+
+body.light .profile-balance-id {
+  color: #ffb97a;
+}
+
+body.light .profile-balance-label {
+  color: #ffb97a;
+}
+
+body.light .profile-balance-amount {
+  color: #ff7300;
+}
+
+body.light .profile-stat-card {
+  background: #fff3e0;
+  color: #181818;
+}
+
+body.light .profile-stat-title {
+  color: #181818;
+}
+
+body.light .profile-stat-value {
+  color: #ff7300;
+}
+
+body.light .profile-stat-desc {
+  color: #ffb97a;
+}
+
+body.light .profile-info-card {
+  background: #fff3e0;
+}
+
+body.light .profile-info-title {
+  color: #ff7300;
+}
+
+body.light .profile-info-item {
+  color: #181818;
+}
+
+body.light .profile-info-item span {
+  color: #ffb97a;
+}
+
+body.light .profile-edit-btn {
+  background: #ff7300;
+  color: #fff;
+}
+
+body.light .profile-edit-btn:hover {
+  background: #ff8a1a;
+}
+
+body.light .profile-modal-content {
+  background: #fff;
+  color: #181818;
+}
+
+body.light .profile-modal-close {
+  color: #ff7300;
+}
+
+body.light .profile-modal-form label {
+  color: #ffb97a;
+}
+
+body.light .profile-modal-form input {
+  background: #fff3e0;
+  color: #181818;
+  border: 1px solid #ff7300;
+}
+
+body.light .profile-modal-form button[type="submit"] {
+  background: #ff7300;
+  color: #fff;
+}
+
+body.light .profile-modal-form button[type="submit"]:hover {
+  background: #ff8a1a;
+}
