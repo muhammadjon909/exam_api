@@ -59,7 +59,7 @@ export function useEmployees(params?: { search?: string; limit?: number; offset?
         const json = await res.json();
         setData(json);
       } catch (err: any) {
-        setError(err.message || 'Nomaʼlum xatolik');
+        setError(err.message || 'Nomalum xatolik');
       } finally {
         setLoading(false);
       }

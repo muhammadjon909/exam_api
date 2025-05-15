@@ -1,4 +1,3 @@
-// src/hooks/useLogin.ts
 import { useState } from 'react';
 import { loginUser } from '../context/authService';
 
@@ -13,7 +12,6 @@ export const useLogin = () => {
         try {
             const data = await loginUser(phone_number, password);
             
-            // Barcha ma'lumotlarni saqlash
             const userData = {
                 id: data.id,
                 phone: data.phone_number,
@@ -30,7 +28,6 @@ export const useLogin = () => {
                 license: data.license
             };
 
-            // Token is already saved in authService, but we save user data here
             localStorage.setItem('user', JSON.stringify(userData));
             
             return userData;

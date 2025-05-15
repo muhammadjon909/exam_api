@@ -14,7 +14,6 @@ export interface Profile {
   salary_type?: string;
   balance?: number;
   inn?: string;
-  // boshqa kerakli maydonlar bo'lsa shu yerga qo'shing
 }
 
 export function useProfile() {
@@ -40,7 +39,7 @@ export function useProfile() {
         const data = await res.json();
         setProfile(data);
       } catch (err: any) {
-        setError(err.message || 'Nomaʼlum xatolik');
+        setError(err.message || 'Nomalum xatolik');
       } finally {
         setLoading(false);
       }

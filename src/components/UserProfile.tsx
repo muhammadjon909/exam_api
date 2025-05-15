@@ -1,4 +1,3 @@
-// src/components/UserProfile.tsx
 import { useProfile } from '../hooks/useProfile';
 import '../styles/userProfile.css';
 import { FiUser } from 'react-icons/fi';

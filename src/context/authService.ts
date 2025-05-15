@@ -1,4 +1,3 @@
-// src/services/authService.ts
 
 export interface LoginResponse {
     id: number;
@@ -52,9 +51,7 @@ export const loginUser = async (
 
         const responseData = await res.json();
         console.log('LOGIN RESPONSE:', responseData);
-        // Agar javobda data bo‘lsa, uni ajratib olamiz
         const result = responseData.data ? responseData.data : responseData;
-        // Tokenni aniqlash
         let token = null;
         if (result.tokens) {
             if (typeof result.tokens === 'object' && result.tokens.access) {

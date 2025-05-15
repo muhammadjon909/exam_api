@@ -134,7 +134,7 @@ const Clients = () => {
         <div className="modal-overlay" style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',background:'rgba(0,0,0,0.45)',zIndex:1000,display:'flex',alignItems:'center',justifyContent:'center',padding:0}}>
           <div className="modal" style={{background:'#23242a',borderRadius:'18px',boxShadow:'0 8px 32px 0 rgba(255,156,74,0.18)',padding:'2.2rem 2rem 2rem 2rem',minWidth:340,maxWidth:400,position:'relative'}}>
             <button className="modal-close" onClick={() => setModalOpen(false)} style={{position:'absolute',top:12,right:16,fontSize:'1.7rem',background:'none',border:'none',color:'#ff9c4a',cursor:'pointer',fontWeight:700}}>&times;</button>
-            <h2 style={{color:'#ff9c4a',marginBottom:'1.2rem',fontWeight:700,fontSize:'1.3rem'}}>Yangi mijoz qo‘shish</h2>
+            <h2 style={{color:'#ff9c4a',marginBottom:'1.2rem',fontWeight:700,fontSize:'1.3rem'}}>Yangi mijoz qoshish</h2>
             <form onSubmit={handleFormSubmit} style={{display:'flex',flexDirection:'column',gap:'1rem',minWidth:320}}>
               <div>
                 <label style={{color:'#ffb97a',fontWeight:500}}>Filial ID (branch)</label>
@@ -157,7 +157,7 @@ const Clients = () => {
                 <input name="license_file" type="file" accept="image/*,application/pdf" ref={licenseInputRef} onChange={handleFormChange} style={{marginTop:'4px'}} />
               </div>
               <button type="submit" disabled={formLoading} style={{background:'#ff9c4a',color:'#fff',border:'none',borderRadius:'8px',padding:'0.7rem',fontWeight:600,fontSize:'1rem',cursor:'pointer',marginTop:'0.5rem'}}>
-                {formLoading ? 'Yuklanmoqda...' : 'Qo‘shish'}
+                {formLoading ? 'Yuklanmoqda...' : 'Qoshish'}
               </button>
             </form>
           </div>

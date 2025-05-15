@@ -23,7 +23,6 @@ const FieldEmployees = () => {
   const [loading, setLoading] = useState(false);
   const [branchesLoading, setBranchesLoading] = useState(false);
 
-  // Filiallar ro'yxatini olish
   useEffect(() => {
     const fetchBranches = async () => {
       setBranchesLoading(true);
@@ -49,7 +48,6 @@ const FieldEmployees = () => {
     fetchBranches();
   }, []);
 
-  // Tanlangan filial uchun smenalarni olish
   useEffect(() => {
     if (!branchId) return;
     const fetchShifts = async () => {

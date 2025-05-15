@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight, FiFilter } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
 import '../styles/dataTable.css';
 import { TableData } from '../types';
 
@@ -12,12 +12,10 @@ const DataTable: React.FC<DataTableProps> = ({ title, data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
 
-  // Get current items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (

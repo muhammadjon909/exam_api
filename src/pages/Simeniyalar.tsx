@@ -28,7 +28,6 @@ const Smenalar = () => {
   const [newShift, setNewShift] = useState({ name: '', date: '' });
   const navigate = useNavigate();
 
-  // Filiallar ro'yxatini olish
   useEffect(() => {
     const fetchBranches = async () => {
       setBranchesLoading(true);
@@ -54,7 +53,6 @@ const Smenalar = () => {
     fetchBranches();
   }, []);
 
-  // Tanlangan filial uchun xodimlarni olish
   useEffect(() => {
     if (!branchId) return;
     const fetchEmployees = async () => {
@@ -93,7 +91,6 @@ const Smenalar = () => {
     e.preventDefault();
     setModalOpen(false);
     setNewShift({ name: '', date: '' });
-    // Yangi smena qo'shish funksiyasi shu yerda bo'lishi mumkin
     alert("Yangi smena qo'shildi!");
   };
 

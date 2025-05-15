@@ -1,6 +1,4 @@
-// import DataTable from '../components/DataTable';
-// import { TableData } from '../types';
-// import { useEmployees } from '../hooks/useEmployees';
+
 import { useEffect, useState } from 'react';
 
 type Branch = {
@@ -27,7 +25,6 @@ const Employees = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [branchesLoading, setBranchesLoading] = useState(false);
 
-  // Filiallar ro'yxatini olish
   useEffect(() => {
     const fetchBranches = async () => {
       setBranchesLoading(true);
@@ -53,7 +50,6 @@ const Employees = () => {
     fetchBranches();
   }, []);
 
-  // Tanlangan filial uchun xodimlarni olish
   useEffect(() => {
     if (!branchId) return;
     const fetchEmployees = async () => {
